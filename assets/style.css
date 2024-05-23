@@ -1,0 +1,69 @@
+@font-face {
+    font-family: LuckiestGuy;
+    src: url(./LuckiestGuy-Regular.ttf);
+  }
+  
+  .LuckiestGuy{
+    font-family: LuckiestGuy;
+  }
+/* style.css */
+.timeline {
+  position: relative;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  margin-bottom: 4rem; /* Khoảng cách giữa các item */
+}
+
+.timeline-item.left {
+  left: 0;
+  clear: left; /* Đảm bảo mỗi item bắt đầu trên một dòng mới */
+}
+
+.timeline-item.right {
+  left: 50%;
+  clear: right;
+}
+
+
+
+.timeline-item.left .timeline-content {
+  margin-left: 4rem;
+}
+
+.timeline-item.right .timeline-content {
+  margin-right: 4rem;
+}
+
+.timeline-icon {
+  position: absolute;
+  top: 0; /* Căn chỉnh icon lên trên cùng */
+  width: 3rem; /* Kích thước icon */
+  height: 3rem;
+}
+
+.timeline-item.left .timeline-icon {
+  left: calc(50% - 1.5rem); /* Căn giữa icon so với đường kẻ */
+}
+
+.timeline-item.right .timeline-icon {
+  right: calc(50% - 1.5rem); /* Căn giữa icon so với đường kẻ */
+}
+
+.timeline-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 4px; /* Độ rộng đường kẻ */
+  background-image: url('image2.png');
+  background-repeat: repeat-y;
+  background-size: contain;
+  z-index: -1;
+}
+
+.timeline-item:last-child .timeline-line {
+  height: 50%; /* Điều chỉnh chiều cao đường kẻ cho item cuối cùng */
+}
