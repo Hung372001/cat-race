@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/style.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 <body>
@@ -36,13 +37,38 @@
                       </ul>
                       <div class="flex-none">
                         <img class="cursor-pointer" src="./public/buttonPlaygame.png">
+                      
                       </div>
                     </div>
                   </div>
             </header>
             <div id="menu-mobile" class="block lg:hidden" >
-              <div class="logo ">
-                <img class="cursor-pointer w-[127.644px] h-[35.3865px] absolute left-[50%]" style="transform: translateX(-50%);" src="./public/logo.svg">
+              <div class="logo max-w-[390px] flex justify-between mx-auto items-center">
+                <img class="cursor-pointer w-[127.644px] h-[35.3865px]" src="./public/logo.svg">
+                <i id="open-menu" class="fa-solid fa-bars block text-white z-20"></i>
+          
+              </div>
+             <div class="menu hidden" id="menu">
+                   <div class="w-[80%] fixed z-10 top-0 right-0 h-[100vh] shadow-2xl bg-[#654634]">
+                          <i id="close" class="fa-solid fa-x hidden fixed right-5 top-3  text-white z-20"></i>
+                         <ul class="flex w-full flex-col absolute left-0 gap-4 top-10">
+                          <li onclick="CloseMenu()"  class="border-b-[1px] w-full">
+                            <a><img class=" h-[24px] cursor-pointer" src="./public/Home.png"></a>
+                          </li>
+                          <li onclick="CloseMenu()" class="border-b-[1px] w-full">
+                            <a><img class=" h-[24px]  cursor-pointer " src="./public/nft.png"></a>
+                          </li>
+                          <li onclick="CloseMenu()" class="border-b-[1px] w-full">
+                            <a><img class="h-[24px]  cursor-pointer" src="./public/roadmap.png"></a>
+                          </li>
+                          <li onclick="CloseMenu()" class="border-b-[1px] w-full">
+                            <a><img class=" h-[24px] cursor-pointer" src="./public/overview.png"></a>
+                          </li>
+                          <li onclick="CloseMenu()" class="border-b-[1px] w-full">
+                            <a><img class=" h-[24px] cursor-pointer" src="./public/contact.png"></a>
+                          </li>
+                         </ul>
+                    </div>
               </div>
             </div>
             <div class="absolute bottom-[200px] left-[50%]" style="transform: translate(-50%)">
@@ -50,7 +76,7 @@
               <img class="cursor-pointer lg:w-[177px] lg:h-auto w-[86.2308px] h-[38px] bottom-[-100px] left-[50%] absolute" style="transform: translate(-50%)" src="./public/buttonPlaygame.png">
             </div>
           </div>
-          <div class="lg:max-w-full max-w-[390px]">
+          <div class="lg:max-w-full mx-auto max-w-[390px]">
             <div class="w-full bg-[#654634]18">
               <h1 class="LuckiestGuy lg:text-[86px] text-[32px] text-center font-medium lg:pt-64 pt-20	text-white ">
                 THE OVERVIEW
@@ -160,51 +186,51 @@
         
          <div class="relative lg:container max-w-[320px]  mx-auto lg:top-[1200px] ">
           <h3 class="LuckiestGuy lg:text-[86px] text-[32px] text-center font-medium pt-64	text-white ">TOKENOMICS</h3>
-          <div class="flex lg:flex-row flex-col mt-64 gap-64">
+          <div class="flex lg:flex-row flex-col mt-64 gap-10 lg:gap-64">
              <img src="public/pit 1.png" class="lg:w-[691px] w-[329px] lg:h-[691px] w-[329px]" alt="">
-             <div class="flex flex-col gap-10">
+             <div class="flex flex-col gap-10 ">
                <div class="flex text-[#00FFFF] justify-between ">
-                 <img src="public/lz-1.png" class="h-[45px] w-[117px]"  alt="">
+                 <img src="public/lz-1.png" class="h-[45px] lg:w-[117px]"  alt="">
                  <p class=" text-[16px] lg:text-[24px] font-medium w-[195px]">Treasury</p>
                  <p class=" text-[16px] lg:text-[24px] font-medium w-[195px]">10%</p>
                </div>
                <div class="flex text-[#00FFFF] justify-between ">
-                <img src="public/lz.png" class="h-[45px] w-[117px]"  alt="">
+                <img src="public/lz.png" class="h-[45px] lg:w-[117px] "  alt="">
                 <p class=" text-[16px] lg:text-[24px] font-medium w-[195px]">Strategic Sale</p>
                 <p class=" text-[16px] lg:text-[24px] font-medium w-[195px]">5%</p>
               </div>
               <div class="flex text-[#00FFFF]  justify-between ">
-                <img src="public/lz-2.png" class="h-[45px] w-[117px]"  alt="">
+                <img src="public/lz-2.png" class="h-[45px] lg:w-[117px] "  alt="">
                 <p class=" text-[16px] lg:text-[24px] font-medium w-[195px]">Public Sale</p>
                 <p class=" text-[16px] lg:text-[24px] font-medium w-[195px]">1%</p>
               </div>
               <div class="flex text-[#00FFFF] justify-between ">
-                <img src="public/lz-4.png" class="h-[45px] w-[117px]"  alt="">
+                <img src="public/lz-4.png" class="h-[45px] lg:w-[117px] "  alt="">
                 <p class=" text-[16px] lg:text-[24px] font-medium w-[195px]">Team</p>
                 <p class=" text-[16px] lg:text-[24px] font-medium w-[195px]">18%</p>
               </div>
               <div class="flex text-[#00FFFF] justify-between ">
-                <img src="public/lz-5.png" class="h-[45px] w-[117px]"  alt="">
+                <img src="public/lz-5.png" class="h-[45px] lg:w-[117px]"  alt="">
                 <p class=" text-[16px] lg:text-[24px] font-medium w-[195px]">Advisor</p>
                 <p class=" text-[16px] lg:text-[24px] font-medium w-[195px]">2%</p>
               </div>
               <div class="flex text-[#00FFFF] justify-between ">
-                <img src="public/lz-6.png" class="h-[45px] w-[117px]"  alt="">
+                <img src="public/lz-6.png" class="h-[45px] lg:w-[117px]"  alt="">
                 <p class=" text-[16px] lg:text-[24px] font-medium w-[195px]">Ecosystem Growt</p>
                 <p class=" text-[16px] lg:text-[24px] font-medium w-[195px]">21%</p>
               </div>
               <div class="flex text-[#00FFFF] justify-between ">
-                <img src="public/lz-7.png" class="h-[45px] w-[117px]"  alt="">
+                <img src="public/lz-7.png" class="h-[45px] lg:w-[117px]"  alt="">
                 <p class=" text-[16px] lg:text-[24px] font-medium w-[195px]">Stacking Rewards</p>
                 <p class=" text-[16px] lg:text-[24px] font-medium w-[195px]">2%</p>
               </div>
               <div class="flex text-[#00FFFF] justify-between ">
-                <img src="public/lz-8.png" class="h-[45px] w-[117px]" alt="">
+                <img src="public/lz-8.png" class="h-[45px] lg:w-[117px]" alt="">
                 <p class=" text-[16px] lg:text-[24px] font-medium w-[195px]">Liquidity Incentive</p>
                 <p class=" text-[16px] lg:text-[24px] font-medium w-[195px]">1%</p>
               </div>
               <div class="flex text-[#00FFFF] justify-between ">
-                <img src="public/lz-9.png" class="h-[45px] w-[117px]"  alt="">
+                <img src="public/lz-9.png" class="h-[45px] lg:w-[117px]"  alt="">
                 <p class=" text-[16px] lg:text-[24px] font-medium w-[195px]">Community</p>
                 <p class=" text-[16px] lg:text-[24px] font-medium w-[195px]">20%</p>
               </div>
@@ -232,6 +258,7 @@
         </div>
           </div>
       </div>
-  
+    </div>
+    <script src="index.js"></script>
 </body>
 </html> 
